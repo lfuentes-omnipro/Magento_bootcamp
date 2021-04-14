@@ -1,31 +1,31 @@
-<?
-namespace OmniPro\Attributes\Controller\Prueba;
+<?php
+namespace OmniPro\Atributo\Controller\Prueba;
 
-use Magento\Framework\App\Action\HttpGetActionInterface;
-use Magento\Framework\App\ResponseInterface;
-use Magento\Framework\Controller\ResultInterface;
-use Magento\Framework\Exception\NotFoundException;
-use Magento\Framework\View\PageFactory;
+use \Magento\Framework\App\Action\HttpGetActionInterface;
 
-
-class OmniPro implements HttpGetActionInterface
+class Omnipro implements HttpGetActionInterface
 {
+    protected $_pageFactory;
+    /**
+     * Omnipro constructor
+     * @param \Magento\Framework\View\Result\PageFactory $pageFactory
+     */
 
-/**
- *  @var \Magento\Framework\View\Result\PageFactory
-
- */
-protected $_pageFactory;
-/**
- * @param \Magento\Framework\Action\Context $context
- */
-public function __constructor (
-    \Magento\Framework\app\Action\Context $context,
-    \Magento\Framework\View\Result\PageFaactory $pageFactory
-)
-{
-    $this-> pageFactory = $pageFactory;
-    //return parent::__construct($contest);
-
-}
+    public function __construct(
+       \Magento\Framework\App\Action\Context $context,
+       \Magento\Framework\View\Result\PageFactory $pageFactory
+    )
+    {
+        $this->_pageFactory = $pageFactory;
+        //return parent::__construct($context);
+    }
+    /**
+     * View page action
+     *
+     * @return \Magento\Framework\Controller\ResultInterface
+     */
+    public function execute()
+    {
+        return $this->_pageFactory->create();
+    }
 }

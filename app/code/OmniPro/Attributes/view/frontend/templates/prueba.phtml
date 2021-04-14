@@ -1,12 +1,11 @@
 <?php
 /** @var \Magento\Framework\View\Element\Template $block */
-$viewModel =$block->getViewModel();
+$viewModel = $block->getViewModel();
 ?>
-<div class="prueba-blog">
-
-</div>
-
-<div data-mage-init='{"prueba-magento":{
+<div data-mage-init='{"prueba-magento": {
     "prueba-parametro": "<?= $viewModel->getConfig() ?>"
 }}'>
+    <div class="container">
+        <input type="button" value="Ejecutar">
+    </div>
 </div>
