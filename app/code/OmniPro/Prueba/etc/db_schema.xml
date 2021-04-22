@@ -8,7 +8,6 @@
         <column xsi:type="varchar" name="img"  nullable="false" comment="Imagen"/>
         <column xsi:type="timestamp" name="created_datetime" nullable="false" default="CURRENT_TIMESTAMP" on_update="false" comment="Created Datetime"/>
         <column xsi:type="timestamp" name="updated_datetime" nullable="false" default="CURRENT_TIMESTAMP" on_update="true" comment="Updated Datetime"/>
-
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="id"/>
         </constraint>
