@@ -1,0 +1,128 @@
+.catalog-product-view{
+    .product-info-main{
+        .page-title-wrapper.product{
+            h1.page-title{
+                text-align: center;
+                color: #000;
+                font-family: "Proxima Nova bold"
+        }
+
+        }
+        .product-reviews-summary{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .reviews-actions{
+                display: none;
+            }
+            .rating-summary{
+                margin-right: 0;
+                .rating-result{
+                    span::before{
+                        color: #D61043;
+                    }
+                } 
+            }           
+        }
+        .product-info-price{
+            font-family: 'Proxima Nova';
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #F9F8F6;
+            .price-box .price-container > span.price-label{
+                display: none;
+            }
+            .price{
+                color: #33333A;
+                font-family: "Proxima Nova";
+            }
+            *:first-child{
+                padding-left: 0px;
+            }
+            *:last-child {
+                padding-right: 0px;
+            }
+
+            .stock.available{
+                display: none;
+            }
+            .product.attribute.sku{
+                display: none;
+            }
+        }
+        .product-info-stock-sku {
+            padding-left: 0%;
+        }
+        .product-add-form .action {
+            font-family: "Proxima Nova";
+            margin-bottom: 15px;
+            left: 11.11%;
+            right: 11.11%;
+            top: 32.5%;
+            bottom: 17.5%;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;   
+        }
+        .action.primary{
+            background-color: black;
+            border: 1px solid #000000;
+            width: 333px;
+            height: 40px;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+        }
+    }
+    .product-add-form .product-options-wrapper .swatch-attribute.size .swatch-option.selected{
+        background: #000;
+        border: 1px solid #ffffff;
+        color: #fff;
+    }
+    .product-add-form{
+        padding-top: 0px;
+
+        .swatch-attribute{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: small;
+        }
+    }
+    .product-social-links{
+        display: none;
+    }
+    #tab-label-reviews-title{
+        display: none;
+    }
+    .product.data.items .item.title.active a:after {
+        content: none;
+    }
+    .page-wrapper{
+        font-family: "Nunito Sans";
+        .copyright{
+            background-color: #33333A;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color:  #ECEFF1;
+        }
+
+    }
+    .catalog-product-view .product.attribute.description {
+        font-family: "Proxima Nova";
+        font-size: 16px;
+        line-height: 20px;
+        text-align: justify;
+        color: #666666;
+    }
+    .data.item.title.active{
+        font-family: "Proxima Nova";
+    }
+}
+ 

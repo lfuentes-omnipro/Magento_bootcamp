@@ -265,4 +265,51 @@ label {
         text-decoration: none;
     }
 
+
 }
+.sidenav-menu {
+     height: 100%;
+     position: fixed;
+     z-index: 1020;
+     top: 0;
+     left: 0;
+     overflow-x: hidden;
+     transition: .5s;
+     padding-top: 45px;
+     width: 0;
+     &.bg-menu {
+         background-repeat: no-repeat;
+         background-image: url('../images/bg-menu.png');
+         background-color: #393fd0;
+         background-position: center 0;
+    }
+    &.active{
+        width: 100%!important;
+    }
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 12px;
+        font-size: 36px;
+        margin-left: 50px;
+        i:before {
+         content: url('../images/ic_back.svg');    
+        }
+    }
+    .sidemenu-item {
+         font-family: "Dosis";
+         font-style: normal;
+         font-weight: 700;
+         font-size: 18px;
+         line-height: 23px;
+         color: #fff;
+         mix-blend-mode: normal;
+         opacity: .5;
+         padding: 8px 8px 8px 52px;
+         text-decoration: none;
+         display: block;
+         text-transform: uppercase;
+         margin-bottom: 30px;
+    }
+}
+

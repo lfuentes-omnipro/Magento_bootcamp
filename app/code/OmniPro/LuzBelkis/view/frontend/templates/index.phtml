@@ -20,11 +20,11 @@
                     <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">
                         Ingreso
                     </a>
-                    </li>
+                </li>
                     <li class="nav-item register" role="presentation">
                         <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Registro</a>
                     </li>
-            </ul>
+                </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                         <div>
@@ -38,7 +38,6 @@
                                     <input type="password" class="form-control input-custom" id="password" name="password" autocomplete="off" placeholder="******" value="">
                                 </div>
                                 <div class="form-check form-switch mb-4 mt-4">
-                                    <!-- <input class="form-check-input chk-newsletter" type="checkbox" id="flexSwitchCheckDefault" name="newsletter" value="false"> -->
                                     <div class="onoffswitch">
                                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
                                         <label class="onoffswitch-label" for="myonoffswitch"></label>
@@ -71,6 +70,7 @@
                                 </div>
                                     <div class="mb-4"><label for="password" class="form-label">Contraseña</label>
                                     <input type="password" class="form-control input-custom" id="password_register" name="password" placeholder="******" autocomplete="off" value="">
+                                
                                 </div>
                                  <div class="d-grid gap-2 col-12 mx-auto">
                                     <button class="btn btn-auth" type="submit">Registro</button>
@@ -80,15 +80,25 @@
                     </div>
                 </div>
         </div>
+
+        <div id="mySidenav" class="sidenav-menu bg-menu">
+            <div class="logo-auth"><img src="<?php echo $this->getViewFileUrl('OmniPro_LuzBelkis::images/logo-auth.svg'); ?>" alt="logo_auth"></div>
+            <a href="#" class="closebtn">
+                <i class="back-menu"></i>
+            </a>
+            <a href="void(0)" class="sidemenu-item">Inicio</a>
+            <a href="void(0)" class="sidemenu-item">Servicio</a>
+            <a href="void(0)" class="sidemenu-item">Nuestro Equipo</a>
+            <a href="void(0)" class="sidemenu-item">Portafolio</a>
+            <a href="void(0)" class="sidemenu-item">Contácto</a>
+            <a href="void(0)" class="sidemenu-item">Términos y Condiciones</a>
+        </div>
     </div>
-
-
-
 </div>
 <script>
     require(['jquery'], function($){ 
         $( document ).ready(function() {
-            // alert("esta es mi primer alerta");
+            // alert("primer alerta");
             $( ".auth__login-register .nav-tabs .nav-item " ).on( "click", function() {
    
                 if($(this).hasClass("login")){
@@ -104,6 +114,14 @@
                     $(".tab-content #login").removeClass("active");
                 }
             });
+
+            $('.auth__menu-ico').click(function() {
+                $( ".sidenav-menu.bg-menu" ).toggleClass("active");
+            });
+            $('.closebtn').click(function() {
+                $( ".sidenav-menu.bg-menu" ).toggleClass("active");
+            });
+            
         });    
      });
 </script>
