@@ -14,7 +14,9 @@
             justify-content: center;
 
             .reviews-actions{
-                display: none;
+                a{
+                    color:black;
+                }
             }
             .rating-summary{
                 margin-right: 0;
@@ -57,12 +59,8 @@
         .product-add-form .action {
             font-family: "Proxima Nova";
             margin-bottom: 15px;
-            left: 11.11%;
-            right: 11.11%;
-            top: 32.5%;
-            bottom: 17.5%;
             font-size: 12px;
-            line-height: 20px;
+            line-height: 13px;
             text-align: center;
             letter-spacing: 2px;
             text-transform: uppercase;   
@@ -124,5 +122,64 @@
     .data.item.title.active{
         font-family: "Proxima Nova";
     }
+    ///////////////
+    //header
+    /////////////
+    .page-wrapper{
+        .logo {
+            margin: 12px 0 0 3px;
+           img{
+            height: auto;
+            width: auto;
+           }
+          
+        }
+        .nav-toggle{
+            top: 9px;
+            right: 15px;
+            left: initial;
+            height: 30px;
+            font-size: 3.4rem;
+        }
+        .header.content{
+            padding-right: 55px;
+            padding-top: 15px;
+        }
+        
+        .action.showcart{
+            font-size: 3.4rem;
+            &:before{
+                background: url(../../../images/bag.svg);
+                width: 25px;
+                height: 21px;
+                background-repeat: no-repeat;
+                content: '';
+            }
+        }
+        .block-search .label{
+            font-size: 1.4rem;
+            &:before{
+                background: url(../../../images/search.svg);
+                width: 20px;
+                height: 21px;
+                background-repeat: no-repeat;
+                content: '';
+            }
+        }
+
+    }
+    //////////////
+    //qty bbottom
+    /////////////
+    .product-options-bottom{
+        label{
+            font-family: 'Proxima Nova';
+        }
+        .qty-buttons{
+            display: inline-block;
+            margin-left: 16px;
+        }
+    }
+    
+    
 }
- 
