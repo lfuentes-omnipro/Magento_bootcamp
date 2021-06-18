@@ -1,0 +1,100 @@
+  //
+//  Mobile @screen__m
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+    
+    .catalog-product-view{
+        .product-info-main{
+            .data.item.title.active{
+                font-family: "Proxima Nova";
+            }
+            .catalog-product-view .product.attribute.description {
+                font-family: "Proxima Nova";
+                font-size: 16px;
+                line-height: 20px;
+                text-align: justify;
+                color: @color-grayish-blue;
+            }
+            //estrellas
+            .product-reviews-summary{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .reviews-actions{
+                a{
+                    color: @color-gray-black;
+                }
+            }
+                .rating-summary{
+                    margin-right: 0;
+                    .rating-result{
+                        span::before{
+                            color: @color-Strong-pink;
+                        }
+                    } 
+                }           
+            }
+            //price
+            .product-info-price{
+                font-family: 'Proxima Nova';
+                display: flex;
+                justify-content: center;
+                border-bottom: 1px solid @color-Light-grayish-orange;
+                .price-box .price-container > span.price-label{
+                    display: none;
+                }
+                .price{
+                    color: @color-grayish-blue;
+                    font-family: "Proxima Nova";
+                }
+                *:first-child{
+                    padding-left: 0px;
+                }
+                *:last-child {
+                    padding-right: 0px;
+                }
+
+                .stock.available{
+                    display: none;
+                }
+                .product.attribute.sku{
+                    display: none;
+                }
+                .product-info-stock-sku {
+                    padding-left: 0%;
+                }
+            }
+            
+        }
+        //barra zice-color-qty
+        .product-add-form .product-options-wrapper .swatch-attribute.size .swatch-option.selected{
+            background:  @color-gray-black;
+            border: 1px solid @color-white ;
+            color: @color-white ;
+        }
+        .product-add-form{
+            padding-top: 0px;
+
+            .swatch-attribute{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-size: small;
+            }
+        }
+        .product-social-links{
+            display: none;
+        }
+        #tab-label-reviews-title{
+            display: none;
+        }
+        .product.data.items .item.title.active a:after {
+            content: none;
+        }
+
+            
+    }
+}
+ 
